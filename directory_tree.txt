@@ -1,0 +1,616 @@
+Directory Tree for: C:\Projets\PPA_Conception - Copie(stable1) - Copie
+==================================================
+
+├── config
+│   └── app_config.json
+├── data
+│   ├── annotations
+│   └── images
+│       ├── appuis_cingulaires
+│       │   ├── bleus
+│       │   │   ├── appui_cing_b_11.png
+│       │   │   ├── appui_cing_b_12.png
+│       │   │   ├── appui_cing_b_13.png
+│       │   │   ├── appui_cing_b_14.png
+│       │   │   ├── appui_cing_b_15.png
+│       │   │   ├── appui_cing_b_16.png
+│       │   │   ├── appui_cing_b_17.png
+│       │   │   ├── appui_cing_b_21.png
+│       │   │   ├── appui_cing_b_22.png
+│       │   │   ├── appui_cing_b_23.png
+│       │   │   ├── appui_cing_b_24.png
+│       │   │   ├── appui_cing_b_25.png
+│       │   │   ├── appui_cing_b_26.png
+│       │   │   ├── appui_cing_b_27.png
+│       │   │   ├── appui_cing_b_31.png
+│       │   │   ├── appui_cing_b_32.png
+│       │   │   ├── appui_cing_b_33.png
+│       │   │   ├── appui_cing_b_34.png
+│       │   │   ├── appui_cing_b_35.png
+│       │   │   ├── appui_cing_b_36.png
+│       │   │   ├── appui_cing_b_37.png
+│       │   │   ├── appui_cing_b_41.png
+│       │   │   ├── appui_cing_b_42.png
+│       │   │   ├── appui_cing_b_43.png
+│       │   │   ├── appui_cing_b_44.png
+│       │   │   ├── appui_cing_b_45.png
+│       │   │   ├── appui_cing_b_46.png
+│       │   │   └── appui_cing_b_47.png
+│       │   └── noirs
+│       │       ├── appui_cing_n_11.png
+│       │       ├── appui_cing_n_12.png
+│       │       ├── appui_cing_n_13.png
+│       │       ├── appui_cing_n_14.png
+│       │       ├── appui_cing_n_15.png
+│       │       ├── appui_cing_n_16.png
+│       │       ├── appui_cing_n_17.png
+│       │       ├── appui_cing_n_21.png
+│       │       ├── appui_cing_n_22.png
+│       │       ├── appui_cing_n_23.png
+│       │       ├── appui_cing_n_24.png
+│       │       ├── appui_cing_n_25.png
+│       │       ├── appui_cing_n_26.png
+│       │       ├── appui_cing_n_27.png
+│       │       ├── appui_cing_n_31.png
+│       │       ├── appui_cing_n_32.png
+│       │       ├── appui_cing_n_33.png
+│       │       ├── appui_cing_n_34.png
+│       │       ├── appui_cing_n_35.png
+│       │       ├── appui_cing_n_36.png
+│       │       ├── appui_cing_n_37.png
+│       │       ├── appui_cing_n_41.png
+│       │       ├── appui_cing_n_42.png
+│       │       ├── appui_cing_n_43.png
+│       │       ├── appui_cing_n_44.png
+│       │       ├── appui_cing_n_45.png
+│       │       ├── appui_cing_n_46.png
+│       │       └── appui_cing_n_47.png
+│       ├── arcades
+│       ├── connexions
+│       ├── crochets
+│       │   ├── ackers
+│       │   │   ├── ackers_inf
+│       │   │   │   ├── ackers_33_distal.png
+│       │   │   │   ├── ackers_34_1.png
+│       │   │   │   ├── ackers_34_2.png
+│       │   │   │   ├── ackers_35_1.png
+│       │   │   │   ├── ackers_35_2.png
+│       │   │   │   ├── ackers_36_1.png
+│       │   │   │   ├── ackers_36_2.png
+│       │   │   │   ├── ackers_37_1.png
+│       │   │   │   ├── ackers_37_2.png
+│       │   │   │   ├── ackers_44_1.png
+│       │   │   │   ├── ackers_44_2.png
+│       │   │   │   ├── ackers_45_1.png
+│       │   │   │   ├── ackers_45_2.png
+│       │   │   │   ├── ackers_46_1.png
+│       │   │   │   ├── ackers_46_2.png
+│       │   │   │   ├── ackers_47_1.png
+│       │   │   │   ├── ackers_47_2.png
+│       │   │   │   └── nally_43_distal.png
+│       │   │   └── ackers_sup
+│       │   │       ├── ackers_13_distal.png
+│       │   │       ├── ackers_13_mesial.png
+│       │   │       ├── ackers_14_1.png
+│       │   │       ├── ackers_14_2.png
+│       │   │       ├── ackers_15_1.png
+│       │   │       ├── ackers_15_2.png
+│       │   │       ├── ackers_16_1.png
+│       │   │       ├── ackers_16_2.png
+│       │   │       ├── ackers_17_1.png
+│       │   │       ├── ackers_17_2.png
+│       │   │       ├── ackers_23_distal.png
+│       │   │       ├── ackers_23_mesial.png
+│       │   │       ├── ackers_24_1.png
+│       │   │       ├── ackers_24_2.png
+│       │   │       ├── ackers_25_1.png
+│       │   │       ├── ackers_25_2.png
+│       │   │       ├── ackers_26_1.png
+│       │   │       ├── ackers_26_2.png
+│       │   │       ├── ackers_27_1.png
+│       │   │       └── ackers_27_2.png
+│       │   ├── bonwill
+│       │   │   ├── bonwill_inf
+│       │   │   │   ├── bonwill_36-37.png
+│       │   │   │   └── bonwill_46-47.png
+│       │   │   └── bonwill_sup
+│       │   │       ├── bonwill_16-17.png
+│       │   │       └── bonwill_26-27.png
+│       │   └── nally
+│       │       ├── nally_inf
+│       │       │   ├── nally_33.png
+│       │       │   ├── nally_34_1.png
+│       │       │   ├── nally_34_2.png
+│       │       │   ├── nally_35_1.png
+│       │       │   ├── nally_35_2.png
+│       │       │   ├── nally_43.png
+│       │       │   ├── nally_44_1.png
+│       │       │   ├── nally_44_2.png
+│       │       │   ├── nally_45_1.png
+│       │       │   └── nally_45_2.png
+│       │       └── nally_sup
+│       │           ├── nally_13.png
+│       │           ├── nally_14_1.png
+│       │           ├── nally_14_2.png
+│       │           ├── nally_15_1.png
+│       │           ├── nally_15_2.png
+│       │           ├── nally_23.png
+│       │           ├── nally_24_1.png
+│       │           ├── nally_24_2.png
+│       │           ├── nally_25_1.png
+│       │           └── nally_25_2.png
+│       ├── dents
+│       │   ├── dent_11.png
+│       │   ├── dent_12.png
+│       │   ├── dent_13.png
+│       │   ├── dent_14.png
+│       │   ├── dent_15.png
+│       │   ├── dent_16.png
+│       │   ├── dent_17.png
+│       │   ├── dent_18.png
+│       │   ├── dent_21.png
+│       │   ├── dent_22.png
+│       │   ├── dent_23.png
+│       │   ├── dent_24.png
+│       │   ├── dent_25.png
+│       │   ├── dent_26.png
+│       │   ├── dent_27.png
+│       │   ├── dent_28.png
+│       │   ├── dent_31.png
+│       │   ├── dent_32.png
+│       │   ├── dent_33.png
+│       │   ├── dent_34.png
+│       │   ├── dent_35.png
+│       │   ├── dent_36.png
+│       │   ├── dent_37.png
+│       │   ├── dent_38.png
+│       │   ├── dent_41.png
+│       │   ├── dent_42.png
+│       │   ├── dent_43.png
+│       │   ├── dent_44.png
+│       │   ├── dent_45.png
+│       │   ├── dent_46.png
+│       │   ├── dent_47.png
+│       │   └── dent_48.png
+│       ├── exports
+│       ├── finition
+│       ├── fonds
+│       │   ├── fond_inferieur.png
+│       │   └── fond_superieur.png
+│       ├── lignes_arret
+│       │   ├── LA_inf
+│       │   │   ├── LA_31-32.png
+│       │   │   ├── LA_31-32_41-42.png
+│       │   │   ├── LA_31-32_41-43.png
+│       │   │   ├── LA_31-32_41-44.png
+│       │   │   ├── LA_31-32_41-45.png
+│       │   │   ├── LA_31-32_41-46.png
+│       │   │   ├── LA_31-32_41.png
+│       │   │   ├── LA_31-33.png
+│       │   │   ├── LA_31-33_41-42.png
+│       │   │   ├── LA_31-33_41-43.png
+│       │   │   ├── LA_31-33_41-44.png
+│       │   │   ├── LA_31-33_41-45.png
+│       │   │   ├── LA_31-33_41-46.png
+│       │   │   ├── LA_31-33_41.png
+│       │   │   ├── LA_31-34.png
+│       │   │   ├── LA_31-34_41-42.png
+│       │   │   ├── LA_31-34_41-43.png
+│       │   │   ├── LA_31-34_41-44.png
+│       │   │   ├── LA_31-34_41-45.png
+│       │   │   ├── LA_31-34_41-46.png
+│       │   │   ├── LA_31-34_41.png
+│       │   │   ├── LA_31-35.png
+│       │   │   ├── LA_31-35_41-42.png
+│       │   │   ├── LA_31-35_41-43.png
+│       │   │   ├── LA_31-35_41-44.png
+│       │   │   ├── LA_31-35_41-45.png
+│       │   │   ├── LA_31-35_41-46.png
+│       │   │   ├── LA_31-35_41.png
+│       │   │   ├── LA_31-36.png
+│       │   │   ├── LA_31-36_41-42.png
+│       │   │   ├── LA_31-36_41-43.png
+│       │   │   ├── LA_31-36_41-44.png
+│       │   │   ├── LA_31-36_41-45.png
+│       │   │   ├── LA_31-36_41.png
+│       │   │   ├── LA_31.png
+│       │   │   ├── LA_31_41-42.png
+│       │   │   ├── LA_31_41-43.png
+│       │   │   ├── LA_31_41-44.png
+│       │   │   ├── LA_31_41-45.png
+│       │   │   ├── LA_31_41-46.png
+│       │   │   ├── LA_31_41.png
+│       │   │   ├── LA_32-33.png
+│       │   │   ├── LA_32-34.png
+│       │   │   ├── LA_32-35.png
+│       │   │   ├── LA_32-36.png
+│       │   │   ├── LA_32-37.png
+│       │   │   ├── LA_32.png
+│       │   │   ├── LA_33-34.png
+│       │   │   ├── LA_33-35.png
+│       │   │   ├── LA_33-36.png
+│       │   │   ├── LA_33-37.png
+│       │   │   ├── LA_33.png
+│       │   │   ├── LA_34-35.png
+│       │   │   ├── LA_34-36.png
+│       │   │   ├── LA_34-37.png
+│       │   │   ├── LA_34.png
+│       │   │   ├── LA_35-36.png
+│       │   │   ├── LA_35-37.png
+│       │   │   ├── LA_35.png
+│       │   │   ├── LA_36-37.png
+│       │   │   ├── LA_36.png
+│       │   │   ├── LA_37.png
+│       │   │   ├── LA_41-42.png
+│       │   │   ├── LA_41-43.png
+│       │   │   ├── LA_41-44.png
+│       │   │   ├── LA_41-45.png
+│       │   │   ├── LA_41-46.png
+│       │   │   ├── LA_41.png
+│       │   │   ├── LA_42-43.png
+│       │   │   ├── LA_42-44.png
+│       │   │   ├── LA_42-45.png
+│       │   │   ├── LA_42-46.png
+│       │   │   ├── LA_42-47.png
+│       │   │   ├── LA_42.png
+│       │   │   ├── LA_43-44.png
+│       │   │   ├── LA_43-45.png
+│       │   │   ├── LA_43-46.png
+│       │   │   ├── LA_43-47.png
+│       │   │   ├── LA_43.png
+│       │   │   ├── LA_44-45.png
+│       │   │   ├── LA_44-46.png
+│       │   │   ├── LA_44-47.png
+│       │   │   ├── LA_44.png
+│       │   │   ├── LA_45-46.png
+│       │   │   ├── LA_45-47.png
+│       │   │   ├── LA_45.png
+│       │   │   ├── LA_46-47.png
+│       │   │   ├── LA_46.png
+│       │   │   └── LA_47.png
+│       │   └── LA_sup
+│       │       ├── LA_11-12.png
+│       │       ├── LA_11-12_21-22.png
+│       │       ├── LA_11-12_21-23.png
+│       │       ├── LA_11-12_21-24.png
+│       │       ├── LA_11-12_21-25.png
+│       │       ├── LA_11-12_21-26.png
+│       │       ├── LA_11-12_21.png
+│       │       ├── LA_11-13.png
+│       │       ├── LA_11-13_21-22.png
+│       │       ├── LA_11-13_21-23.png
+│       │       ├── LA_11-13_21-24.png
+│       │       ├── LA_11-13_21-25.png
+│       │       ├── LA_11-13_21-26.png
+│       │       ├── LA_11-13_21.png
+│       │       ├── LA_11-14.png
+│       │       ├── LA_11-14_21-22.png
+│       │       ├── LA_11-14_21-23.png
+│       │       ├── LA_11-14_21-24.png
+│       │       ├── LA_11-14_21-25.png
+│       │       ├── LA_11-14_21-26.png
+│       │       ├── LA_11-14_21.png
+│       │       ├── LA_11-15.png
+│       │       ├── LA_11-15_21-22.png
+│       │       ├── LA_11-15_21-23.png
+│       │       ├── LA_11-15_21-24.png
+│       │       ├── LA_11-15_21-25.png
+│       │       ├── LA_11-15_21-26.png
+│       │       ├── LA_11-15_21.png
+│       │       ├── LA_11-16.png
+│       │       ├── LA_11-16_21-22.png
+│       │       ├── LA_11-16_21-23.png
+│       │       ├── LA_11-16_21-24.png
+│       │       ├── LA_11-16_21-25.png
+│       │       ├── LA_11-16_21.png
+│       │       ├── LA_11.png
+│       │       ├── LA_11_21-22.png
+│       │       ├── LA_11_21-23.png
+│       │       ├── LA_11_21-24.png
+│       │       ├── LA_11_21-25.png
+│       │       ├── LA_11_21-26.png
+│       │       ├── LA_11_21.png
+│       │       ├── LA_12-13.png
+│       │       ├── LA_12-14.png
+│       │       ├── LA_12-15.png
+│       │       ├── LA_12-16.png
+│       │       ├── LA_12-17.png
+│       │       ├── LA_12.png
+│       │       ├── LA_13-14.png
+│       │       ├── LA_13-15.png
+│       │       ├── LA_13-16.png
+│       │       ├── LA_13-17.png
+│       │       ├── LA_13.png
+│       │       ├── LA_14-15.png
+│       │       ├── LA_14-16.png
+│       │       ├── LA_14-17.png
+│       │       ├── LA_14.png
+│       │       ├── LA_15-16.png
+│       │       ├── LA_15-17.png
+│       │       ├── LA_15.png
+│       │       ├── LA_16-17.png
+│       │       ├── LA_16.png
+│       │       ├── LA_17.png
+│       │       ├── LA_21-22.png
+│       │       ├── LA_21-23.png
+│       │       ├── LA_21-24.png
+│       │       ├── LA_21-25.png
+│       │       ├── LA_21-26.png
+│       │       ├── LA_21.png
+│       │       ├── LA_22-23.png
+│       │       ├── LA_22-24.png
+│       │       ├── LA_22-25.png
+│       │       ├── LA_22-26.png
+│       │       ├── LA_22-27.png
+│       │       ├── LA_22.png
+│       │       ├── LA_23-24.png
+│       │       ├── LA_23-25.png
+│       │       ├── LA_23-26.png
+│       │       ├── LA_23-27.png
+│       │       ├── LA_23.png
+│       │       ├── LA_24-25.png
+│       │       ├── LA_24-26.png
+│       │       ├── LA_24-27.png
+│       │       ├── LA_24.png
+│       │       ├── LA_25-26.png
+│       │       ├── LA_25-27.png
+│       │       ├── LA_25.png
+│       │       ├── LA_26-27.png
+│       │       ├── LA_26.png
+│       │       └── LA_27.png
+│       └── selles
+│           ├── selles_inf
+│           │   ├── selle_31-32.png
+│           │   ├── selle_31-32_41-42.png
+│           │   ├── selle_31-32_41-43.png
+│           │   ├── selle_31-32_41-44.png
+│           │   ├── selle_31-32_41-45.png
+│           │   ├── selle_31-32_41-46.png
+│           │   ├── selle_31-32_41.png
+│           │   ├── selle_31-33.png
+│           │   ├── selle_31-33_41-42.png
+│           │   ├── selle_31-33_41-43.png
+│           │   ├── selle_31-33_41-44.png
+│           │   ├── selle_31-33_41-45.png
+│           │   ├── selle_31-33_41-46.png
+│           │   ├── selle_31-33_41.png
+│           │   ├── selle_31-34.png
+│           │   ├── selle_31-34_41-42.png
+│           │   ├── selle_31-34_41-43.png
+│           │   ├── selle_31-34_41-44.png
+│           │   ├── selle_31-34_41-45.png
+│           │   ├── selle_31-34_41-46.png
+│           │   ├── selle_31-34_41.png
+│           │   ├── selle_31-35.png
+│           │   ├── selle_31-35_41-42.png
+│           │   ├── selle_31-35_41-43.png
+│           │   ├── selle_31-35_41-44.png
+│           │   ├── selle_31-35_41-45.png
+│           │   ├── selle_31-35_41-46.png
+│           │   ├── selle_31-35_41.png
+│           │   ├── selle_31-36.png
+│           │   ├── selle_31-36_41-42.png
+│           │   ├── selle_31-36_41-43.png
+│           │   ├── selle_31-36_41-44.png
+│           │   ├── selle_31-36_41-45.png
+│           │   ├── selle_31-36_41.png
+│           │   ├── selle_31.png
+│           │   ├── selle_31_41-42.png
+│           │   ├── selle_31_41-43.png
+│           │   ├── selle_31_41-44.png
+│           │   ├── selle_31_41-45.png
+│           │   ├── selle_31_41-46.png
+│           │   ├── selle_31_41.png
+│           │   ├── selle_32-33.png
+│           │   ├── selle_32-34.png
+│           │   ├── selle_32-35.png
+│           │   ├── selle_32-36.png
+│           │   ├── selle_32-37.png
+│           │   ├── selle_32.png
+│           │   ├── selle_33-34.png
+│           │   ├── selle_33-35.png
+│           │   ├── selle_33-36.png
+│           │   ├── selle_33-37.png
+│           │   ├── selle_33.png
+│           │   ├── selle_34-35.png
+│           │   ├── selle_34-36.png
+│           │   ├── selle_34-37.png
+│           │   ├── selle_34.png
+│           │   ├── selle_35-36.png
+│           │   ├── selle_35-37.png
+│           │   ├── selle_35.png
+│           │   ├── selle_36-37.png
+│           │   ├── selle_36.png
+│           │   ├── selle_37.png
+│           │   ├── selle_41-42.png
+│           │   ├── selle_41-43.png
+│           │   ├── selle_41-44.png
+│           │   ├── selle_41-45.png
+│           │   ├── selle_41-46.png
+│           │   ├── selle_41.png
+│           │   ├── selle_42-43.png
+│           │   ├── selle_42-44.png
+│           │   ├── selle_42-45.png
+│           │   ├── selle_42-46.png
+│           │   ├── selle_42-47.png
+│           │   ├── selle_42.png
+│           │   ├── selle_43-44.png
+│           │   ├── selle_43-45.png
+│           │   ├── selle_43-46.png
+│           │   ├── selle_43-47.png
+│           │   ├── selle_43.png
+│           │   ├── selle_44-45.png
+│           │   ├── selle_44-46.png
+│           │   ├── selle_44-47.png
+│           │   ├── selle_44.png
+│           │   ├── selle_45-46.png
+│           │   ├── selle_45-47.png
+│           │   ├── selle_45.png
+│           │   ├── selle_46-47.png
+│           │   ├── selle_46.png
+│           │   └── selle_47.png
+│           └── selles_sup
+│               ├── selle_11-12.png
+│               ├── selle_11-12_21-22.png
+│               ├── selle_11-12_21-23.png
+│               ├── selle_11-12_21-24.png
+│               ├── selle_11-12_21-25.png
+│               ├── selle_11-12_21-26.png
+│               ├── selle_11-12_21.png
+│               ├── selle_11-13.png
+│               ├── selle_11-13_21-22.png
+│               ├── selle_11-13_21-23.png
+│               ├── selle_11-13_21-24.png
+│               ├── selle_11-13_21-25.png
+│               ├── selle_11-13_21-26.png
+│               ├── selle_11-13_21.png
+│               ├── selle_11-14.png
+│               ├── selle_11-14_21-22.png
+│               ├── selle_11-14_21-23.png
+│               ├── selle_11-14_21-24.png
+│               ├── selle_11-14_21-25.png
+│               ├── selle_11-14_21-26.png
+│               ├── selle_11-14_21.png
+│               ├── selle_11-15.png
+│               ├── selle_11-15_21-22.png
+│               ├── selle_11-15_21-23.png
+│               ├── selle_11-15_21-24.png
+│               ├── selle_11-15_21-25.png
+│               ├── selle_11-15_21-26.png
+│               ├── selle_11-15_21.png
+│               ├── selle_11-16.png
+│               ├── selle_11-16_21-22.png
+│               ├── selle_11-16_21-23.png
+│               ├── selle_11-16_21-24.png
+│               ├── selle_11-16_21-25.png
+│               ├── selle_11-16_21.png
+│               ├── selle_11.png
+│               ├── selle_11_21-22.png
+│               ├── selle_11_21-23.png
+│               ├── selle_11_21-24.png
+│               ├── selle_11_21-25.png
+│               ├── selle_11_21-26.png
+│               ├── selle_11_21.png
+│               ├── selle_12-13.png
+│               ├── selle_12-14.png
+│               ├── selle_12-15.png
+│               ├── selle_12-16.png
+│               ├── selle_12-17.png
+│               ├── selle_12.png
+│               ├── selle_13-14.png
+│               ├── selle_13-15.png
+│               ├── selle_13-16.png
+│               ├── selle_13-17.png
+│               ├── selle_13.png
+│               ├── selle_14-15.png
+│               ├── selle_14-16.png
+│               ├── selle_14-17.png
+│               ├── selle_14.png
+│               ├── selle_15-16.png
+│               ├── selle_15-17.png
+│               ├── selle_15.png
+│               ├── selle_16-17.png
+│               ├── selle_16.png
+│               ├── selle_17.png
+│               ├── selle_21-22.png
+│               ├── selle_21-23.png
+│               ├── selle_21-24.png
+│               ├── selle_21-25.png
+│               ├── selle_21-26.png
+│               ├── selle_21.png
+│               ├── selle_22-23.png
+│               ├── selle_22-24.png
+│               ├── selle_22-25.png
+│               ├── selle_22-26.png
+│               ├── selle_22-27.png
+│               ├── selle_22.png
+│               ├── selle_23-24.png
+│               ├── selle_23-25.png
+│               ├── selle_23-26.png
+│               ├── selle_23-27.png
+│               ├── selle_23.png
+│               ├── selle_24-25.png
+│               ├── selle_24-26.png
+│               ├── selle_24-27.png
+│               ├── selle_24.png
+│               ├── selle_25-26.png
+│               ├── selle_25-27.png
+│               ├── selle_25.png
+│               ├── selle_26-27.png
+│               ├── selle_26.png
+│               └── selle_27.png
+├── docs
+│   ├── ARCHITECTURE.md
+│   ├── NOTES.md
+│   ├── README.md
+│   └── USAGE.md
+├── PPA_Conception
+│   └── README.md
+├── src
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── arcade_inf.cpython-312.pyc
+│   │   ├── arcade_sup.cpython-312.pyc
+│   │   ├── backend.cpython-312.pyc
+│   │   ├── base_frontend.cpython-312.pyc
+│   │   ├── config.cpython-312.pyc
+│   │   ├── dental_app.cpython-312.pyc
+│   │   ├── error_handler.cpython-312.pyc
+│   │   ├── main.cpython-312.pyc
+│   │   ├── selle_editor.cpython-312.pyc
+│   │   └── ui_components.cpython-312.pyc
+│   ├── controllers
+│   ├── data
+│   │   └── images
+│   │       ├── appuis_cingulaires
+│   │       ├── crochets
+│   │       ├── dents
+│   │       ├── fonds
+│   │       ├── lignes_arret
+│   │       └── selles
+│   │           ├── selles_inf
+│   │           └── selles_sup
+│   ├── elements_valides
+│   │   └── dental_database.db
+│   ├── models
+│   │   └── __init__.py
+│   ├── mvc
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── controller.cpython-312.pyc
+│   │   │   ├── model.cpython-312.pyc
+│   │   │   └── view.cpython-312.pyc
+│   │   ├── __init__.py
+│   │   ├── controller.py
+│   │   ├── model.py
+│   │   └── view.py
+│   ├── utils
+│   ├── views
+│   ├── __init__.py
+│   ├── backend.py
+│   ├── base_frontend.py
+│   ├── check_db.py
+│   ├── config.py
+│   ├── database_content.txt
+│   ├── dental_app.py
+│   ├── dental_design_app.log
+│   ├── error_handler.py
+│   ├── extract_db_content.py
+│   ├── fix_db_ids.py
+│   ├── launch.py
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── test.py
+│   └── ui_components.py
+├── tests
+│   ├── test_ai_model.py
+│   ├── test_backend.py
+│   └── test_frontend.py
+├── dental_design_app.log
+├── directory_tree.txt
+├── generate_dir_tree.py
+├── INSTALL.md
+├── LICENSE
+├── README.md
+├── setup.py
+└── USER_GUIDE.md

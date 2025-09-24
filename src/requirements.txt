@@ -1,4 +1,7 @@
-tkinter
-Pillow
-numpy
-scikit-learn
+# Core dependencies
+Pillow>=9.0.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+
+# Note: tkinter usually comes pre-installed with Python
+

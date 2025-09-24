@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PFE - Application Principale",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src",
+                "PYTHONIOENCODING": "utf-8"
+            }
+        },
+        {
+            "name": "PFE - Arcade Inf\u00e9rieure",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/arcade_inf.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src",
+                "PYTHONIOENCODING": "utf-8"
+            }
+        },
+        {
+            "name": "PFE - Arcade Sup\u00e9rieure",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/arcade_sup.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src",
+                "PYTHONIOENCODING": "utf-8"
+            }
+        }
+    ]
+}
