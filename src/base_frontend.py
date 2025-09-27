@@ -116,21 +116,32 @@ class BaseDentalApp:
 
     def _on_element_type_change(self, *args):
         """Gérer le changement de type d'élément."""
+        print(f"🔄 Changement de type d'élément vers: {self.element_type.get()}")
         self.selle_files = self._get_selle_files()
-        # Mettre à jour le menu
-        self.selle_menu["menu"].delete(0, "end")
-        for f in self.selle_files:
-            self.selle_menu["menu"].add_command(label=f, command=tk._setit(self.selected_selle, f))
-        if self.selle_files:
-            self.selected_selle.set(self.selle_files[0])
-        else:
-            self.selected_selle.set("(aucun fichier)")
+        print(f"📁 Fichiers trouvés: {len(self.selle_files)} - {self.selle_files[:3]}...")
+
+        # Recréer complètement le menu des selles pour s'assurer de sa mise à jour
+        if hasattr(self, 'selle_menu') and self.selle_menu:
+            self.selle_menu.destroy()
+
+        self.selected_selle = tk.StringVar(value=self.selle_files[0] if self.selle_files else "(aucun fichier)")
+        self.selle_menu = tk.OptionMenu(self.selle_frame, self.selected_selle, *self.selle_files, command=self.load_selle)
+        self.selle_menu.config(width=25)
+        self.selle_menu.pack(fill=tk.X, pady=2)
+
+        print(f"✅ Menu des selles recréé avec {len(self.selle_files)} fichiers")
+
+        # Recharger les éléments sauvegardés pour le type actuel
+        self._reload_saved_elements_for_model()
+
+        # Forcer la mise à jour de l'interface
+        self.root.update_idletasks()
 
     def _get_selle_files(self) -> List[str]:
         """Obtenir la liste des fichiers pour le type d'élément actuel."""
         # Déterminer le dossier selon le type sélectionné
         element_type = getattr(self, 'element_type', tk.StringVar(value="Selles")).get()
-        
+
         if element_type == "Selles":
             folder = os.path.join(self.image_folder, self.backend.model_manager.current_model['folder'])
         elif element_type == "Appuis Cingulaires Bleus":
@@ -144,7 +155,11 @@ class BaseDentalApp:
         elif element_type == "Crochets Nally":
             folder = os.path.join(self.image_folder, "crochets", "nally")
         elif element_type == "Lignes d'Arrêt":
-            folder = os.path.join(self.image_folder, "lignes_arret")
+            model_folder = self.backend.model_manager.current_model['folder']
+            if 'selles_sup' in model_folder:
+                folder = os.path.join(self.image_folder, "lignes_arret", "LA_sup")
+            elif 'selles_inf' in model_folder:
+                folder = os.path.join(self.image_folder, "lignes_arret", "LA_inf")
         else:
             # Par défaut, selles
             folder = os.path.join(self.image_folder, self.backend.model_manager.current_model['folder'])
@@ -153,6 +168,7 @@ class BaseDentalApp:
             files = []
             if os.path.exists(folder):
                 files = [f for f in os.listdir(folder) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+            # print(f"DEBUG: element_type={element_type}, folder={folder}, files count={len(files)}")  # Temporaire pour debug
             return files if files else ["(aucun fichier)"]
         except Exception as e:
             print(f"Erreur lors de la lecture du dossier {folder}: {e}")
@@ -160,11 +176,16 @@ class BaseDentalApp:
 
     def _load_transformed_image(self, props: ElementProperties) -> Optional[Image.Image]:
         """Charger et transformer une image selon le type d'élément."""
-        # Déterminer le dossier selon le type
         element_type = getattr(self, 'element_type', tk.StringVar(value="Selles")).get()
-        
+
         if element_type == "Selles":
             folder = self.backend.model_manager.current_model['folder']
+        elif element_type == "Lignes d'Arrêt":
+            model_folder = self.backend.model_manager.current_model['folder']
+            if 'selles_sup' in model_folder:
+                folder = os.path.join("lignes_arret", "LA_sup")
+            elif 'selles_inf' in model_folder:
+                folder = os.path.join("lignes_arret", "LA_inf")
         elif element_type == "Appuis Cingulaires Bleus":
             folder = os.path.join("appuis_cingulaires", "bleus")
         elif element_type == "Appuis Cingulaires Noirs":
@@ -175,10 +196,6 @@ class BaseDentalApp:
             folder = os.path.join("crochets", "bonwill")
         elif element_type == "Crochets Nally":
             folder = os.path.join("crochets", "nally")
-        elif element_type == "Lignes d'Arrêt":
-            folder = "lignes_arret"
-        else:
-            folder = self.backend.model_manager.current_model['folder']
         
         path = os.path.join(self.image_folder, folder, props.image)
         
@@ -510,10 +527,13 @@ class BaseDentalApp:
             if props and hasattr(props, 'x') and hasattr(props, 'y'):
                 print(f"📍 Position chargée: x={props.x:.1f}, y={props.y:.1f}")
 
+                # S'assurer que le type_element est correct selon le type sélectionné
+                current_element_type = self.element_type.get()
+                props.type_element = current_element_type
+
                 # Mettre à jour le type d'élément sélectionné si nécessaire
-                if hasattr(props, 'type_element') and props.type_element:
-                    self.element_type.set(props.type_element)
-                    print(f"🔧 Type d'élément changé en: {props.type_element}")
+                self.element_type.set(current_element_type)
+                print(f"🔧 Type d'élément changé en: {current_element_type}")
 
                 # Rafraîchir l'affichage
                 self._refresh_selle(filename)
@@ -524,8 +544,11 @@ class BaseDentalApp:
                 print(f"✅ Élément {filename} chargé avec succès")
             else:
                 print(f"⚠️ Propriétés non trouvées pour {filename}, création de nouvelles propriétés")
-                # Créer de nouvelles propriétés par défaut
-                default_props = self.backend.load_selle_properties(filename)
+                # Créer de nouvelles propriétés par défaut avec le bon type
+                current_element_type = self.element_type.get()
+                props = ElementProperties(image=filename, x=400, y=300, type_element=current_element_type)
+                self.backend.model_manager.selles_props[filename] = props
+                print(f"✅ Nouvelles propriétés créées pour {filename} avec type: {current_element_type}")
                 self._refresh_selle(filename)
                 self._select_selle(filename)
 
@@ -773,8 +796,12 @@ class BaseDentalApp:
 
     def _save_to_database(self):
         try:
-            self.backend.save_selles_to_db()
-            messagebox.showinfo("Succès", "Configuration enregistrée dans la base de données!")
+            if self.active_selle:
+                # Sauvegarder seulement l'élément actif
+                self.backend.model_manager.save_single_selle_to_db(self.active_selle)
+                messagebox.showinfo("Succès", f"Élément '{self.active_selle}' enregistré dans la base de données!")
+            else:
+                messagebox.showwarning("Avertissement", "Aucun élément actif sélectionné pour la sauvegarde.")
         except Exception as e:
             messagebox.showerror("Erreur", f"Impossible d'enregistrer: {e}")
 
@@ -1181,11 +1208,8 @@ class BaseDentalApp:
                         type_element=type_element
                     )
 
-                    # Ajouter aux propriétés du backend
+                    # Ajouter aux propriétés du backend (sans affichage automatique)
                     self.backend.model_manager.selles_props[image] = props
-
-                    # Afficher sur le canvas
-                    self._refresh_selle(image)
                     elements_loaded += 1
 
             conn.close()

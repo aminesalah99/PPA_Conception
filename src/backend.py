@@ -165,23 +165,17 @@ class ModelManager:
         if filename not in self.selles_props:
             self.selles_props[filename] = ElementProperties(image=filename)
         else:
-            # Only save if position actually changed (to avoid unnecessary saves)
-            if abs(self.selles_props[filename].x - x) > 0.5 or abs(self.selles_props[filename].y - y) > 0.5:
-                self.selles_props[filename].x = x
-                self.selles_props[filename].y = y
-                self.save_selle_properties(filename)
-            else:
-                self.selles_props[filename].x = x
-                self.selles_props[filename].y = y
-                # Don't save for minor position changes during drag operations
+            self.selles_props[filename].x = x
+            self.selles_props[filename].y = y
+            # Supprimé : sauvegarde automatique
 
     def update_selle_angle(self, filename: str, angle: float):
         """Mettre à jour l'angle de rotation d'une selle."""
         if filename not in self.selles_props:
             self.selles_props[filename] = ElementProperties(image=filename)
-        
+
         self.selles_props[filename].angle = angle
-        self.save_selle_properties(filename)
+        # Supprimé : sauvegarde automatique
 
     def update_selle_scale(self, filename: str, scale: float):
         """Mettre à jour l'échelle d'une selle."""
@@ -191,21 +185,21 @@ class ModelManager:
         # Limiter l'échelle pour éviter les valeurs extrêmes
         scale = max(0.3, min(2.0, scale))
         self.selles_props[filename].scale = scale
-        self.save_selle_properties(filename)
+        # Supprimé : sauvegarde automatique
 
     def flip_selle_x(self, filename: str):
         if filename not in self.selles_props:
             self.selles_props[filename] = ElementProperties(image=filename)
-        
+
         self.selles_props[filename].flip_x = not self.selles_props[filename].flip_x
-        self.save_selle_properties(filename)
+        # Supprimé : sauvegarde automatique
 
     def flip_selle_y(self, filename: str):
         if filename not in self.selles_props:
             self.selles_props[filename] = ElementProperties(image=filename)
-        
+
         self.selles_props[filename].flip_y = not self.selles_props[filename].flip_y
-        self.save_selle_properties(filename)
+        # Supprimé : sauvegarde automatique
 
     def save_selle_properties(self, filename: str):
         """Sauvegarder les propriétés d'une selle dans la base de données."""
@@ -463,14 +457,40 @@ class Backend:
         """Trouver les selles correspondantes aux dents masquées."""
         return self.model_manager.find_matching_selles(hidden_teeth)
 
-    def check_selles_exists(self, selle_names: List[str]) -> List[bool]:
+    def check_selles_exists(self, sella_names: List[str]) -> List[bool]:
         """Vérifier si les selles existent dans le dossier des images."""
         results = []
-        for name in selle_names:
+        for name in sella_names:
             folder = os.path.join(self.image_folder, self.model_manager.current_model['folder'])
             path = os.path.join(folder, name)
             results.append(os.path.exists(path))
         return results
+
+    def find_associated_selle(self, la_filename: str) -> Optional[str]:
+        """Trouver la selle associée à une ligne d'arrêt."""
+        # Remplacer LA_ par sella_
+        sella_name = la_filename.replace('LA_', 'selle_')
+        return sella_name if sella_name in self.model_manager.selles_props else None
+
+    def find_associated_la(self, sella_filename: str) -> Optional[str]:
+        """Trouver la ligne d'arrêt associée à une selle."""
+        # Remplacer sella_ par LA_
+        la_name = sella_filename.replace('selle_', 'LA_')
+        # Vérifier si le fichier LA existe dans le dossier approprié
+        return la_name if self._la_file_exists(la_name) else None
+
+    def _la_file_exists(self, la_name: str) -> bool:
+        """Vérifier si un fichier LA existe dans le dossier approprié."""
+        model_folder = self.model_manager.current_model['folder']
+        if 'selles_sup' in model_folder:
+            la_folder = 'LA_sup'
+        elif 'selles_inf' in model_folder:
+            la_folder = 'LA_inf'
+        else:
+            return False
+
+        path = os.path.join(self.image_folder, 'lignes_arret', la_folder, la_name)
+        return os.path.exists(path)
 
     def get_elements_summary(self) -> str:
         """Obtenir un résumé des éléments pour affichage."""
